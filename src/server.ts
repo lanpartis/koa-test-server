@@ -9,7 +9,10 @@ router.get('/*', async (ctx) => {
 });
 
 app.use(router.routes());
+let port  = process.env.PORT;
+if (port == null || port == "") {
+  port = "8000";
+}
+app.listen(port);
 
-app.listen(3000);
-
-console.log('Server running on port 3000');
+console.log('Server running on port 8000');

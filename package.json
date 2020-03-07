@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node dist/server.js"
+    "start": "tsc && node dist/server.js",
+    "deploy": "node dist/server.js",
+    "postinstall": "npm run tsc "
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,8 @@
   "homepage": "https://github.com/lanpartis/koa-test-server#readme",
   "dependencies": {
     "koa": "^2.11.0",
-    "koa-router": "^8.0.8"
+    "koa-router": "^8.0.8",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/koa": "^2.11.2",
